@@ -27,7 +27,7 @@
 #
 class User < ApplicationRecord
   include SimpleDiscussion::ForumUser
-
+  has_many :jobs, dependent: :destroy
   has_person_name
 
   # Include default devise modules. Others available are:
