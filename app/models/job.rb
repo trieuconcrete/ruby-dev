@@ -43,6 +43,14 @@ class Job < ApplicationRecord
   has_rich_text :company_description
   has_one_attached :company_logo
 
+  # Scopes
+  scope :desc, ->{ order(created_at: :desc) }
+  scope :pending, ->{ where(status: JOB_STATUSES[:pending]) }
+  scope :published, ->{ where(status: JOB_STATUSES[:published]) }
+  scope :archived, ->{ where(status: JOB_STATUSES[:archived]) }
+
+
+  # Constants
   COMPENSATION_TYPES = [
     "Contract",
     "Full-time"
