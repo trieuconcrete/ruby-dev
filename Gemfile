@@ -29,6 +29,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
+  gem 'annotate', '~> 3.1', '>= 3.1.1'
+  gem "pry-rails", "~> 0.3.9"
+  gem "faker", "~> 2.14"
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -54,6 +57,14 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise', '~> 4.7', '>= 4.7.2'
+gem "inline_svg", "~> 1.7"
 gem 'friendly_id', '~> 5.3'
+gem "pay", "~> 2.2"
+gem "pagy", "~> 3.9"
 gem 'sidekiq', '~> 6.1', '>= 6.1.1'
 gem 'name_of_person', '~> 1.1', '>= 1.1.1'
+gem 'whenever', '~> 1.0'
+gem "stripe", "~> 5.28"
+gem "stripe_event", "~> 2.3"
+
+gem "simple_discussion", "~> 1.2"
