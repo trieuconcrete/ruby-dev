@@ -8,5 +8,6 @@
 ```
 bundle install
 rake db:create
+rails db:seed
 rails s
 ```
